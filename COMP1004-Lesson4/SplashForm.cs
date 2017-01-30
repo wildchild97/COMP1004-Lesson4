@@ -21,6 +21,7 @@ namespace COMP1004_Lesson4
         {
             this.Enabled = false;
             this.Hide();
+            Program.MyCalculatorForm.Show();
         }
     }
 }

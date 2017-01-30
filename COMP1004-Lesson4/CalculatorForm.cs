@@ -72,5 +72,20 @@ namespace COMP1004_Lesson4
             }
 
         }
+
+        private void CalculatorForm_FormClosing(object sender, FormClosingEventArgs e)
+        {        
+            DialogResult result = MessageBox.Show("Are You Sure?", "Confirm", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            
+            if(result == DialogResult.OK)
+            {
+                Program.MySplashForm.Close();
+            }
+            else
+            {
+                e.Cancel = true;
+            }
+            
+        }
     }
 }
