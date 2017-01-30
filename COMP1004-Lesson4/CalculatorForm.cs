@@ -13,6 +13,9 @@ namespace COMP1004_Lesson4
 {
     public partial class CalculatorForm : Form
     {
+        //3. create a reference to the previous form
+        public SplashForm previousForm;
+
         //PRIVATE INSTANCE VARIABLES    
         private string _operand1;
         private string _operand2;
@@ -79,7 +82,8 @@ namespace COMP1004_Lesson4
             
             if(result == DialogResult.OK)
             {
-                Program.MySplashForm.Close();
+                this.previousForm.Close();
+                //Program.MySplashForm.Close();
             }
             else
             {
